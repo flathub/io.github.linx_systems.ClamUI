@@ -1,6 +1,6 @@
 app-id: io.github.linx_systems.ClamUI
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -47,7 +47,7 @@ modules:
   # intltool required for building libdbusmenu (even with --disable-nls)
   - name: intltool
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: archive
         url: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
@@ -65,8 +65,8 @@ modules:
     build-options:
       cflags: -Wno-error
       env:
-        HAVE_VALGRIND_FALSE: "#"
-        HAVE_VALGRIND_TRUE: ""
+        HAVE_VALGRIND_FALSE: '#'
+        HAVE_VALGRIND_TRUE: ''
     config-opts:
       - --with-gtk=3
       - --disable-dumper
@@ -85,7 +85,7 @@ modules:
       - /share/libdbusmenu
       - /lib/girepository-1.0/DbusmenuGtk3-0.4.typelib
       - /lib/libdbusmenu-gtk3.*
-      - "*.la"
+      - '*.la'
 
   - name: json-c
     buildsystem: cmake-ninja
@@ -136,15 +136,18 @@ modules:
       - install -Dm644 icons/io.github.linx_systems.ClamUI.svg /app/share/icons/hicolor/scalable/apps/io.github.linx_systems.ClamUI.svg
       - install -Dm644 icons/io.github.linx_systems.ClamUI.png /app/share/icons/hicolor/128x128/apps/io.github.linx_systems.ClamUI.png
       # File manager integration files (bundled for first-run installation)
-      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI.nemo_action /app/share/clamui/integrations/io.github.linx_systems.ClamUI.nemo_action
-      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI-virustotal.nemo_action /app/share/clamui/integrations/io.github.linx_systems.ClamUI-virustotal.nemo_action
-      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI-virustotal.desktop /app/share/clamui/integrations/io.github.linx_systems.ClamUI-virustotal.desktop
+      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI.nemo_action
+        /app/share/clamui/integrations/io.github.linx_systems.ClamUI.nemo_action
+      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI-virustotal.nemo_action
+        /app/share/clamui/integrations/io.github.linx_systems.ClamUI-virustotal.nemo_action
+      - install -Dm644 flathub/integrations/io.github.linx_systems.ClamUI-virustotal.desktop
+        /app/share/clamui/integrations/io.github.linx_systems.ClamUI-virustotal.desktop
       - install -Dm755 flathub/integrations/clamui-virustotal-nautilus.sh /app/share/clamui/integrations/clamui-virustotal-nautilus.sh
     sources:
       - type: git
         url: https://github.com/linx-systems/clamui.git
-        tag: v0.1.3
+        tag: v0.1.4
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+(?:[a-z]+\d*)?)$
-        commit: 625676380cdc18f52ba2cf0cf2663c564618a3aa
+        commit: cb957b68a8ecdfd29c923c36b0cc69abe5b46e04
