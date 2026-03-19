@@ -6,6 +6,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 command: clamui
 
+
 finish-args:
   # Display - use fallback-x11 for X11/Wayland compatibility
   - --socket=fallback-x11
