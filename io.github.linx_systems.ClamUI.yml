@@ -130,8 +130,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/linx-systems/clamui.git
-        tag: v0.2.0
-        commit: 9b077c6a11b41e3bedb0ea8e3a59cc11da28ff86
+        tag: v0.3.0
+        commit: 15d03f49b75dea541ab2d05584703b95058b35e8
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+(?:[a-z]+\d*)?)$
