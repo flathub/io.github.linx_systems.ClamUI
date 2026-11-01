@@ -69,7 +69,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/linx-systems/clamui.git
-        commit: "6f823d9acb38b59dbc97fa5892b6fc19f948976b"
+        commit: "518726489459c442d575f73d99ea8e2436ca1204"
       # Generated only from an actual Cargo.lock; never hand-edit checksums.
       - cargo-sources.json
       # Generated only from Bun's exported desktop/yarn.lock. It includes the
