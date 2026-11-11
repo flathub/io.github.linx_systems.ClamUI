@@ -15,6 +15,8 @@ finish-args:
   - --socket=wayland
   - --share=ipc
   - --device=dri
+  # Work around upstream WebKitGTK Wayland dmabuf protocol errors (#282).
+  - --env=WEBKIT_DISABLE_DMABUF_RENDERER=1
   - --share=network
 
 
@@ -69,7 +71,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/linx-systems/clamui.git
-        commit: "518726489459c442d575f73d99ea8e2436ca1204"
+        commit: "c62f373daf46ca2ed08ea831ae8dca89a65a0242"
       # Generated only from an actual Cargo.lock; never hand-edit checksums.
       - cargo-sources.json
       # Generated only from Bun's exported desktop/yarn.lock. It includes the
