@@ -6,9 +6,11 @@ add-build-extensions:
   org.freedesktop.Sdk.Extension.node24:
     version: "26.08"
     directory: lib/sdk/node24
+    remove-after-build: true
   org.freedesktop.Sdk.Extension.rust-stable:
     version: "26.08"
     directory: lib/sdk/rust-stable
+    remove-after-build: true
 command: clamui
 finish-args:
   - --socket=fallback-x11
